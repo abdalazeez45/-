@@ -1,0 +1,63 @@
+Node.js version v25.2.1 detected.
+Odd numbered Node.js versions will not enter LTS status and should not be used for production. For more information, please see https://nodejs.org/en/about/previous-releases/.
+
+Linting "app"...
+
+D:\╪ز┘╪▓┘è┘\┘à╪ش┘╪» ╪ش╪»┘è╪»\╪»╪▒┘è┘à ╪د┘╪ش╪»┘è╪»\src\components\shared\menu-item-card\menu-item-card.component.ts
+  3:10  warning  'StarRatingComponent' is defined but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+  4:10  warning  'NgOptimizedImage' is defined but never used. Allowed unused vars must match /^_/u     @typescript-eslint/no-unused-vars
+
+D:\╪ز┘╪▓┘è┘\┘à╪ش┘╪» ╪ش╪»┘è╪»\╪»╪▒┘è┘à ╪د┘╪ش╪»┘è╪»\src\components\visual-search\visual-search.component.ts
+  7:10  warning  'StarRatingComponent' is defined but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+
+D:\╪ز┘╪▓┘è┘\┘à╪ش┘╪» ╪ش╪»┘è╪»\╪»╪▒┘è┘à ╪د┘╪ش╪»┘è╪»\src\services\achievement.service.ts
+  1:30  warning  'computed' is defined but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+  4:10  warning  'User' is defined but never used. Allowed unused vars must match /^_/u      @typescript-eslint/no-unused-vars
+
+D:\╪ز┘╪▓┘è┘\┘à╪ش┘╪» ╪ش╪»┘è╪»\╪»╪▒┘è┘à ╪د┘╪ش╪»┘è╪»\src\services\analytics.service.ts
+  4:10  warning  'Order' is defined but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+  5:10  warning  'Item' is defined but never used. Allowed unused vars must match /^_/u   @typescript-eslint/no-unused-vars
+
+D:\╪ز┘╪▓┘è┘\┘à╪ش┘╪» ╪ش╪»┘è╪»\╪»╪▒┘è┘à ╪د┘╪ش╪»┘è╪»\src\services\auth.service.ts
+    3:16  warning  'UserRole' is defined but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+    5:22  warning  'tap' is defined but never used. Allowed unused vars must match /^_/u       @typescript-eslint/no-unused-vars
+   76:24  warning  'error' is defined but never used. Allowed unused args must match /^_/u     @typescript-eslint/no-unused-vars
+  106:24  warning  'error' is defined but never used. Allowed unused args must match /^_/u     @typescript-eslint/no-unused-vars
+  168:24  warning  'error' is defined but never used. Allowed unused args must match /^_/u     @typescript-eslint/no-unused-vars
+  229:24  warning  'error' is defined but never used. Allowed unused args must match /^_/u     @typescript-eslint/no-unused-vars
+
+D:\╪ز┘╪▓┘è┘\┘à╪ش┘╪» ╪ش╪»┘è╪»\╪»╪▒┘è┘à ╪د┘╪ش╪»┘è╪»\src\services\gemini.service.ts
+  4:10  warning  'Category' is defined but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+  4:20  warning  'Item' is defined but never used. Allowed unused vars must match /^_/u      @typescript-eslint/no-unused-vars
+
+D:\╪ز┘╪▓┘è┘\┘à╪ش┘╪» ╪ش╪»┘è╪»\╪»╪▒┘è┘à ╪د┘╪ش╪»┘è╪»\src\services\menu.service.ts
+  463:18  warning  'error' is defined but never used. Allowed unused args must match /^_/u  @typescript-eslint/no-unused-vars
+  478:18  warning  'error' is defined but never used. Allowed unused args must match /^_/u  @typescript-eslint/no-unused-vars
+  491:18  warning  'error' is defined but never used. Allowed unused args must match /^_/u  @typescript-eslint/no-unused-vars
+  513:18  warning  'error' is defined but never used. Allowed unused args must match /^_/u  @typescript-eslint/no-unused-vars
+  542:18  warning  'error' is defined but never used. Allowed unused args must match /^_/u  @typescript-eslint/no-unused-vars
+  565:18  warning  'error' is defined but never used. Allowed unused args must match /^_/u  @typescript-eslint/no-unused-vars
+Lint warnings found in the listed files.
+
+D:\╪ز┘╪▓┘è┘\┘à╪ش┘╪» ╪ش╪»┘è╪»\╪»╪▒┘è┘à ╪د┘╪ش╪»┘è╪»\src\services\notification.service.ts
+  1:40  warning  'inject' is defined but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+
+D:\╪ز┘╪▓┘è┘\┘à╪ش┘╪» ╪ش╪»┘è╪»\╪»╪▒┘è┘à ╪د┘╪ش╪»┘è╪»\src\services\order.service.ts
+  107:18  warning  'error' is defined but never used. Allowed unused args must match /^_/u  @typescript-eslint/no-unused-vars
+  228:18  warning  'error' is defined but never used. Allowed unused args must match /^_/u  @typescript-eslint/no-unused-vars
+
+D:\╪ز┘╪▓┘è┘\┘à╪ش┘╪» ╪ش╪»┘è╪»\╪»╪▒┘è┘à ╪د┘╪ش╪»┘è╪»\src\services\promotions.service.ts
+
+  1:30  warning  'computed' is defined but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+
+D:\╪ز┘╪▓┘è┘\┘à╪ش┘╪» ╪ش╪»┘è╪»\╪»╪▒┘è┘à ╪د┘╪ش╪»┘è╪»\src\services\reservation.service.ts
+  3:10  warning  'HttpClient' is defined but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+  4:10  warning  'of' is defined but never used. Allowed unused vars must match /^_/u          @typescript-eslint/no-unused-vars
+  5:10  warning  'catchError' is defined but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+  5:22  warning  'tap' is defined but never used. Allowed unused vars must match /^_/u         @typescript-eslint/no-unused-vars
+
+D:\╪ز┘╪▓┘è┘\┘à╪ش┘╪» ╪ش╪»┘è╪»\╪»╪▒┘è┘à ╪د┘╪ش╪»┘è╪»\src\services\view.service.ts
+  1:38  warning  'NgZone' is defined but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+
+ظ£û 30 problems (0 errors, 30 warnings)
+

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <title>Dream City Restaurants | مطاعم دريم سيتي</title>
+  <base href="/" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <meta name="theme-color" content="#f97316">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Leaflet Map Library -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <style>
+    body { font-family: 'Cairo', sans-serif; }
+    /* Custom scrollbar for a better look */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #f1f1f1;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #888;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #555;
+    }
+    /* Animations for cart items */
+    @keyframes slideInUp {
+      from { opacity: 0; transform: translateY(15px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .animate-slide-in-up {
+      animation: slideInUp 0.3s ease-out forwards;
+    }
+    @keyframes fadeOut {
+      from { opacity: 1; transform: scale(1); }
+      to { opacity: 0; transform: scale(0.95); }
+    }
+    .animate-fade-out {
+      animation: fadeOut 0.3s ease-out forwards;
+    }
+    @keyframes pulse-bg {
+      0% { background-color: transparent; }
+      50% { background-color: #fff7ed; } /* Tailwind orange-50 */
+      100% { background-color: transparent; }
+    }
+    .animate-pulse-bg {
+      animation: pulse-bg 0.5s ease-out;
+    }
+     /* Print-specific styles for clean invoice printing */
+    @media print {
+      app-header, app-footer, .no-print {
+        display: none !important;
+      }
+      body, main {
+        padding: 0 !important;
+        margin: 0 !important;
+        background-color: #fff !important;
+      }
+      @page {
+        size: A4;
+        margin: 15mm;
+      }
+    }
+  </style>
+<script type="importmap">
+{
+  "imports": {
+    "rxjs": "https://aistudiocdn.com/rxjs@^7.8.2?conditions=es2015",
+    "rxjs/operators": "https://aistudiocdn.com/rxjs@^7.8.2/operators?conditions=es2015",
+    "rxjs/ajax": "https://aistudiocdn.com/rxjs@^7.8.2/ajax?conditions=es2015",
+    "rxjs/webSocket": "https://aistudiocdn.com/rxjs@^7.8.2/webSocket?conditions=es2015",
+    "rxjs/testing": "https://aistudiocdn.com/rxjs@^7.8.2/testing?conditions=es2015",
+    "rxjs/fetch": "https://aistudiocdn.com/rxjs@^7.8.2/fetch?conditions=es2015",
+    "@angular/platform-browser": "https://next.esm.sh/@angular/platform-browser@^21.0.1?external=rxjs",
+    "@angular/compiler": "https://next.esm.sh/@angular/compiler@^21.0.1?external=rxjs",
+    "@angular/core": "https://next.esm.sh/@angular/core@^21.0.1?external=rxjs",
+    "@angular/common": "https://next.esm.sh/@angular/common@^21.0.1?external=rxjs",
+    "@angular/common/http": "https://next.esm.sh/@angular/common@^21.0.1/http?external=rxjs",
+    "@angular/forms": "https://next.esm.sh/@angular/forms@^21.0.1?external=rxjs",
+    "@google/genai": "https://esm.sh/@google/genai@^1.35.0?external=rxjs",
+    "d3": "https://esm.sh/d3@^7.9.0?external=rxjs",
+    "@angular/router": "https://next.esm.sh/@angular/router@^21.0.1?external=rxjs",
+    "leaflet": "https://esm.sh/leaflet@1.9.4?external=rxjs"
+  }
+}
+</script>
+</head>
+<body class="bg-gray-50">
+  <app-root></app-root>
+</body>
+</html>

@@ -1,0 +1,668 @@
+npm warn Unknown cli config "--runInBand". This will stop working in the next major version of npm.
+
+> copy-of-dream-city-restaurant@0.0.0 test
+> jest
+
+ts-jest[ts-jest-transformer] (WARN) Define `ts-jest` config under `globals` is deprecated. Please do
+transform: {
+    <transform_regex>: ['ts-jest', { /* ts-jest config goes here in Jest */ }],
+},
+See more at https://kulshekhar.github.io/ts-jest/docs/getting-started/presets#advanced
+ts-jest[config] (WARN) message TS151001: If you have issues related to imports, you should consider setting `esModuleInterop` to `true` in your TypeScript configuration file (usually `tsconfig.json`). See https://blogs.msdn.microsoft.com/typescript/2018/01/31/announcing-typescript-2-7/#easier-ecmascript-module-interoperability for more information.
+ts-jest[ts-jest-transformer] (WARN) Define `ts-jest` config under `globals` is deprecated. Please do
+transform: {
+    <transform_regex>: ['ts-jest', { /* ts-jest config goes here in Jest */ }],
+},
+See more at https://kulshekhar.github.io/ts-jest/docs/getting-started/presets#advanced
+ts-jest[config] (WARN) message TS151001: If you have issues related to imports, you should consider setting `esModuleInterop` to `true` in your TypeScript configuration file (usually `tsconfig.json`). See https://blogs.msdn.microsoft.com/typescript/2018/01/31/announcing-typescript-2-7/#easier-ecmascript-module-interoperability for more information.
+ts-jest[ts-jest-transformer] (WARN) Define `ts-jest` config under `globals` is deprecated. Please do
+transform: {
+    <transform_regex>: ['ts-jest', { /* ts-jest config goes here in Jest */ }],
+},
+See more at https://kulshekhar.github.io/ts-jest/docs/getting-started/presets#advanced
+ts-jest[config] (WARN) message TS151001: If you have issues related to imports, you should consider setting `esModuleInterop` to `true` in your TypeScript configuration file (usually `tsconfig.json`). See https://blogs.msdn.microsoft.com/typescript/2018/01/31/announcing-typescript-2-7/#easier-ecmascript-module-interoperability for more information.
+FAIL src/components/about/about.component.spec.ts (7.044 s)
+  ظù AboutComponent ظ║ should create
+
+    NG0400: A platform with a different configuration has been created. Please destroy it first.
+
+       9 |     TestBed.initTestEnvironment(
+      10 |       await import('@angular/platform-browser-dynamic/testing').then(m => m.BrowserDynamicTestingModule),
+    > 11 |       await import('@angular/platform-browser-dynamic/testing').then(m => m.platformBrowserDynamicTesting())
+         |                                                                             ^
+      12 |     );
+      13 |
+      14 |     await TestBed.configureTestingModule({
+
+      at assertPlatform (node_modules/@angular/core/fesm2022/core.mjs:824:11)
+      at Object.<anonymous> (node_modules/@angular/core/fesm2022/core.mjs:803:77)
+      at src/components/about/about.component.spec.ts:11:77
+      at _ZoneDelegate.invoke (node_modules/zone.js/bundles/zone.umd.js:407:168)
+      at _ZoneImpl.run (node_modules/zone.js/bundles/zone.umd.js:162:47)
+      at node_modules/zone.js/bundles/zone.umd.js:2181:42
+      at _ZoneDelegate.invokeTask (node_modules/zone.js/bundles/zone.umd.js:436:181)
+      at _ZoneImpl.runTask (node_modules/zone.js/bundles/zone.umd.js:204:51)
+      at drainMicroTaskQueueSynchronously (node_modules/zone.js/bundles/zone.umd.js:617:35)
+
+FAIL src/services/gemini.service.spec.ts (8.058 s)
+  ظù GeminiService ظ║ should be created
+
+    ReferenceError: GEMINI_API_KEY is not defined
+
+      29 |      // IMPORTANT: The API key is injected via environment variables.
+      30 |     // Do not hardcode or expose it in the code.
+    > 31 |     this.ai = new GoogleGenAI({ apiKey: GEMINI_API_KEY });
+         |                                         ^
+      32 |   }
+      33 |
+      34 |   async generateDescription(itemName: string): Promise<string> {
+
+      at new GeminiService (src/services/gemini.service.ts:31:41)
+      at Object.GeminiService_Factory [as factory] (ng:\GeminiService\╔╡fac.js:5:10)
+      at node_modules/@angular/core/fesm2022/_effect-chunk2.mjs:1316:35
+      at runInInjectorProfilerContext (node_modules/@angular/core/fesm2022/_effect-chunk2.mjs:444:5)
+      at R3Injector.hydrate (node_modules/@angular/core/fesm2022/_effect-chunk2.mjs:1314:11)
+      at R3Injector.get (node_modules/@angular/core/fesm2022/_effect-chunk2.mjs:1203:23)
+      at _TestBedImpl.inject (node_modules/@angular/core/fesm2022/testing.mjs:1413:48)
+      at _TestBedImpl.inject (node_modules/@angular/core/fesm2022/testing.mjs:1300:33)
+      at src/services/gemini.service.spec.ts:9:23
+      at _ZoneDelegate.invoke (node_modules/zone.js/bundles/zone.umd.js:407:168)
+      at _ProxyZoneSpec.onInvoke (node_modules/zone.js/bundles/zone-testing.umd.js:1079:43)
+      at _ZoneDelegate.invoke (node_modules/zone.js/bundles/zone.umd.js:407:56)
+      at _ZoneImpl.run (node_modules/zone.js/bundles/zone.umd.js:162:47)
+      at Object.wrappedFunc (node_modules/zone.js/bundles/zone-testing.umd.js:407:38)
+
+FAIL src/components/header/header.component.spec.ts (8.918 s)
+  ظù HeaderComponent ظ║ should create
+
+    NG0400: A platform with a different configuration has been created. Please destroy it first.
+
+      15 |     TestBed.initTestEnvironment(
+      16 |       await import('@angular/platform-browser-dynamic/testing').then(m => m.BrowserDynamicTestingModule),
+    > 17 |       await import('@angular/platform-browser-dynamic/testing').then(m => m.platformBrowserDynamicTesting())
+         |                                                                             ^
+      18 |     );
+      19 |
+      20 |     const cartServiceSpy = jasmine.createSpyObj('CartService', ['getCartItems']);
+
+      at assertPlatform (node_modules/@angular/core/fesm2022/core.mjs:824:11)
+      at Object.<anonymous> (node_modules/@angular/core/fesm2022/core.mjs:803:77)
+      at src/components/header/header.component.spec.ts:17:77
+      at _ZoneDelegate.invoke (node_modules/zone.js/bundles/zone.umd.js:407:168)
+      at _ZoneImpl.run (node_modules/zone.js/bundles/zone.umd.js:162:47)
+      at node_modules/zone.js/bundles/zone.umd.js:2181:42
+      at _ZoneDelegate.invokeTask (node_modules/zone.js/bundles/zone.umd.js:436:181)
+      at _ZoneImpl.runTask (node_modules/zone.js/bundles/zone.umd.js:204:51)
+      at drainMicroTaskQueueSynchronously (node_modules/zone.js/bundles/zone.umd.js:617:35)
+
+  ظù HeaderComponent ظ║ should inject services
+
+    NG0400: A platform with a different configuration has been created. Please destroy it first.
+
+      15 |     TestBed.initTestEnvironment(
+      16 |       await import('@angular/platform-browser-dynamic/testing').then(m => m.BrowserDynamicTestingModule),
+    > 17 |       await import('@angular/platform-browser-dynamic/testing').then(m => m.platformBrowserDynamicTesting())
+         |                                                                             ^
+      18 |     );
+      19 |
+      20 |     const cartServiceSpy = jasmine.createSpyObj('CartService', ['getCartItems']);
+
+      at assertPlatform (node_modules/@angular/core/fesm2022/core.mjs:824:11)
+      at Object.<anonymous> (node_modules/@angular/core/fesm2022/core.mjs:803:77)
+      at src/components/header/header.component.spec.ts:17:77
+      at _ZoneDelegate.invoke (node_modules/zone.js/bundles/zone.umd.js:407:168)
+      at _ZoneImpl.run (node_modules/zone.js/bundles/zone.umd.js:162:47)
+      at node_modules/zone.js/bundles/zone.umd.js:2181:42
+      at _ZoneDelegate.invokeTask (node_modules/zone.js/bundles/zone.umd.js:436:181)
+      at _ZoneImpl.runTask (node_modules/zone.js/bundles/zone.umd.js:204:51)
+      at drainMicroTaskQueueSynchronously (node_modules/zone.js/bundles/zone.umd.js:617:35)
+
+FAIL src/services/ai-recommendation.service.spec.ts
+  ظù AiRecommendationService ظ║ should be created
+
+    ReferenceError: GEMINI_API_KEY is not defined
+
+       9 | export class AiRecommendationService {
+      10 |   private menuService = inject(MenuService);
+    > 11 |   private ai = new GoogleGenAI({ apiKey: GEMINI_API_KEY });
+         |                                          ^
+      12 |   
+      13 |   recommendations = signal<Item[]>([]);
+      14 |   isLoading = signal(false);
+
+      at new AiRecommendationService (src/services/ai-recommendation.service.ts:11:42)
+      at Object.AiRecommendationService_Factory [as factory] (ng:\AiRecommendationService\╔╡fac.js:5:10)
+      at node_modules/@angular/core/fesm2022/_effect-chunk2.mjs:1316:35
+      at runInInjectorProfilerContext (node_modules/@angular/core/fesm2022/_effect-chunk2.mjs:444:5)
+      at R3Injector.hydrate (node_modules/@angular/core/fesm2022/_effect-chunk2.mjs:1314:11)
+      at R3Injector.get (node_modules/@angular/core/fesm2022/_effect-chunk2.mjs:1203:23)
+      at _TestBedImpl.inject (node_modules/@angular/core/fesm2022/testing.mjs:1413:48)
+      at _TestBedImpl.inject (node_modules/@angular/core/fesm2022/testing.mjs:1300:33)
+      at src/services/ai-recommendation.service.spec.ts:9:23
+      at _ZoneDelegate.invoke (node_modules/zone.js/bundles/zone.umd.js:407:168)
+      at _ProxyZoneSpec.onInvoke (node_modules/zone.js/bundles/zone-testing.umd.js:1079:43)
+      at _ZoneDelegate.invoke (node_modules/zone.js/bundles/zone.umd.js:407:56)
+      at _ZoneImpl.run (node_modules/zone.js/bundles/zone.umd.js:162:47)
+      at Object.wrappedFunc (node_modules/zone.js/bundles/zone-testing.umd.js:407:38)
+
+FAIL src/services/loyalty.service.spec.ts
+  ظù LoyaltyService ظ║ should be created
+
+    ╔╡NotFound: NG0201: No provider found for `LoyaltyService`. Find more at https://v21.angular.dev/errors/NG0201
+
+       7 |   beforeEach(() => {
+       8 |     TestBed.configureTestingModule({});
+    >  9 |     service = TestBed.inject(LoyaltyService);
+         |                       ^
+      10 |   });
+      11 |
+      12 |   it('should be created', () => {
+
+      at createRuntimeError (node_modules/@angular/core/fesm2022/_effect-chunk2.mjs:602:17)
+      at NullInjector.get (node_modules/@angular/core/fesm2022/_effect-chunk2.mjs:883:21)
+      at R3Injector.get (node_modules/@angular/core/fesm2022/_effect-chunk2.mjs:1208:27)
+      at R3Injector.get (node_modules/@angular/core/fesm2022/_effect-chunk2.mjs:1208:27)
+      at _TestBedImpl.inject (node_modules/@angular/core/fesm2022/testing.mjs:1414:58)
+      at _TestBedImpl.inject (node_modules/@angular/core/fesm2022/testing.mjs:1300:33)
+      at src/services/loyalty.service.spec.ts:9:23
+      at _ZoneDelegate.invoke (node_modules/zone.js/bundles/zone.umd.js:407:168)
+      at _ProxyZoneSpec.onInvoke (node_modules/zone.js/bundles/zone-testing.umd.js:1079:43)
+      at _ZoneDelegate.invoke (node_modules/zone.js/bundles/zone.umd.js:407:56)
+      at _ZoneImpl.run (node_modules/zone.js/bundles/zone.umd.js:162:47)
+      at Object.wrappedFunc (node_modules/zone.js/bundles/zone-testing.umd.js:407:38)
+
+FAIL src/services/theme.service.spec.ts
+  ظù ThemeService ظ║ should be created
+
+    TypeError: window.matchMedia is not a function
+
+      14 |     } else {
+      15 |       // Check system preference
+    > 16 |       const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+         |                                  ^
+      17 |       this.isDarkMode.set(prefersDark);
+      18 |     }
+      19 |
+
+      at new ThemeService (src/services/theme.service.ts:16:34)
+      at Object.ThemeService_Factory [as factory] (ng:\ThemeService\╔╡fac.js:5:10)
+      at node_modules/@angular/core/fesm2022/_effect-chunk2.mjs:1316:35
+      at runInInjectorProfilerContext (node_modules/@angular/core/fesm2022/_effect-chunk2.mjs:444:5)
+      at R3Injector.hydrate (node_modules/@angular/core/fesm2022/_effect-chunk2.mjs:1314:11)
+      at R3Injector.get (node_modules/@angular/core/fesm2022/_effect-chunk2.mjs:1203:23)
+      at _TestBedImpl.inject (node_modules/@angular/core/fesm2022/testing.mjs:1413:48)
+      at _TestBedImpl.inject (node_modules/@angular/core/fesm2022/testing.mjs:1300:33)
+      at src/services/theme.service.spec.ts:9:23
+      at _ZoneDelegate.invoke (node_modules/zone.js/bundles/zone.umd.js:407:168)
+      at _ProxyZoneSpec.onInvoke (node_modules/zone.js/bundles/zone-testing.umd.js:1079:43)
+      at _ZoneDelegate.invoke (node_modules/zone.js/bundles/zone.umd.js:407:56)
+      at _ZoneImpl.run (node_modules/zone.js/bundles/zone.umd.js:162:47)
+      at Object.wrappedFunc (node_modules/zone.js/bundles/zone-testing.umd.js:407:38)
+
+FAIL src/services/driver-profile.service.spec.ts
+  ظù DriverProfileService ظ║ should be created
+
+    ╔╡NotFound: NG0201: No provider found for `DriverProfileService`. Find more at https://v21.angular.dev/errors/NG0201
+
+       7 |   beforeEach(() => {
+       8 |     TestBed.configureTestingModule({});
+    >  9 |     service = TestBed.inject(DriverProfileService);
+         |                       ^
+      10 |   });
+      11 |
+      12 |   it('should be created', () => {
+
+      at createRuntimeError (node_modules/@angular/core/fesm2022/_effect-chunk2.mjs:602:17)
+      at NullInjector.get (node_modules/@angular/core/fesm2022/_effect-chunk2.mjs:883:21)
+      at R3Injector.get (node_modules/@angular/core/fesm2022/_effect-chunk2.mjs:1208:27)
+      at R3Injector.get (node_modules/@angular/core/fesm2022/_effect-chunk2.mjs:1208:27)
+      at _TestBedImpl.inject (node_modules/@angular/core/fesm2022/testing.mjs:1414:58)
+      at _TestBedImpl.inject (node_modules/@angular/core/fesm2022/testing.mjs:1300:33)
+      at src/services/driver-profile.service.spec.ts:9:23
+      at _ZoneDelegate.invoke (node_modules/zone.js/bundles/zone.umd.js:407:168)
+      at _ProxyZoneSpec.onInvoke (node_modules/zone.js/bundles/zone-testing.umd.js:1079:43)
+      at _ZoneDelegate.invoke (node_modules/zone.js/bundles/zone.umd.js:407:56)
+      at _ZoneImpl.run (node_modules/zone.js/bundles/zone.umd.js:162:47)
+      at Object.wrappedFunc (node_modules/zone.js/bundles/zone-testing.umd.js:407:38)
+
+FAIL src/services/error.handler.spec.ts
+  ظù ErrorHandlerService ظ║ should be created
+
+    ╔╡NotFound: NG0201: No provider found for `ErrorHandlerService`. Find more at https://v21.angular.dev/errors/NG0201
+
+      12 |       ]
+      13 |     });
+    > 14 |     service = TestBed.inject(ErrorHandlerService);
+         |                       ^
+      15 |   });
+      16 |
+      17 |   it('should be created', () => {
+
+      at createRuntimeError (node_modules/@angular/core/fesm2022/_effect-chunk2.mjs:602:17)
+      at NullInjector.get (node_modules/@angular/core/fesm2022/_effect-chunk2.mjs:883:21)
+      at R3Injector.get (node_modules/@angular/core/fesm2022/_effect-chunk2.mjs:1208:27)
+      at R3Injector.get (node_modules/@angular/core/fesm2022/_effect-chunk2.mjs:1208:27)
+      at _TestBedImpl.inject (node_modules/@angular/core/fesm2022/testing.mjs:1414:58)
+      at _TestBedImpl.inject (node_modules/@angular/core/fesm2022/testing.mjs:1300:33)
+      at src/services/error.handler.spec.ts:14:23
+      at _ZoneDelegate.invoke (node_modules/zone.js/bundles/zone.umd.js:407:168)
+      at _ProxyZoneSpec.onInvoke (node_modules/zone.js/bundles/zone-testing.umd.js:1079:43)
+      at _ZoneDelegate.invoke (node_modules/zone.js/bundles/zone.umd.js:407:56)
+      at _ZoneImpl.run (node_modules/zone.js/bundles/zone.umd.js:162:47)
+      at Object.wrappedFunc (node_modules/zone.js/bundles/zone-testing.umd.js:407:38)
+
+FAIL src/services/ai-assistant.service.spec.ts
+  ظù AiAssistantService ظ║ should be created
+
+    ╔╡NotFound: NG0201: No provider found for `AiAssistantService`. Find more at https://v21.angular.dev/errors/NG0201
+
+       7 |   beforeEach(() => {
+       8 |     TestBed.configureTestingModule({});
+    >  9 |     service = TestBed.inject(AiAssistantService);
+         |                       ^
+      10 |   });
+      11 |
+      12 |   it('should be created', () => {
+
+      at createRuntimeError (node_modules/@angular/core/fesm2022/_effect-chunk2.mjs:602:17)
+      at NullInjector.get (node_modules/@angular/core/fesm2022/_effect-chunk2.mjs:883:21)
+      at R3Injector.get (node_modules/@angular/core/fesm2022/_effect-chunk2.mjs:1208:27)
+      at R3Injector.get (node_modules/@angular/core/fesm2022/_effect-chunk2.mjs:1208:27)
+      at _TestBedImpl.inject (node_modules/@angular/core/fesm2022/testing.mjs:1414:58)
+      at _TestBedImpl.inject (node_modules/@angular/core/fesm2022/testing.mjs:1300:33)
+      at src/services/ai-assistant.service.spec.ts:9:23
+      at _ZoneDelegate.invoke (node_modules/zone.js/bundles/zone.umd.js:407:168)
+      at _ProxyZoneSpec.onInvoke (node_modules/zone.js/bundles/zone-testing.umd.js:1079:43)
+      at _ZoneDelegate.invoke (node_modules/zone.js/bundles/zone.umd.js:407:56)
+      at _ZoneImpl.run (node_modules/zone.js/bundles/zone.umd.js:162:47)
+      at Object.wrappedFunc (node_modules/zone.js/bundles/zone-testing.umd.js:407:38)
+
+FAIL src/services/driver-dashboard.service.spec.ts
+  ظù DriverDashboardService ظ║ should be created
+
+    ╔╡NotFound: NG0201: No provider found for `DriverDashboardService`. Find more at https://v21.angular.dev/errors/NG0201
+
+       7 |   beforeEach(() => {
+       8 |     TestBed.configureTestingModule({});
+    >  9 |     service = TestBed.inject(DriverDashboardService);
+         |                       ^
+      10 |   });
+      11 |
+      12 |   it('should be created', () => {
+
+      at createRuntimeError (node_modules/@angular/core/fesm2022/_effect-chunk2.mjs:602:17)
+      at NullInjector.get (node_modules/@angular/core/fesm2022/_effect-chunk2.mjs:883:21)
+      at R3Injector.get (node_modules/@angular/core/fesm2022/_effect-chunk2.mjs:1208:27)
+      at R3Injector.get (node_modules/@angular/core/fesm2022/_effect-chunk2.mjs:1208:27)
+      at _TestBedImpl.inject (node_modules/@angular/core/fesm2022/testing.mjs:1414:58)
+      at _TestBedImpl.inject (node_modules/@angular/core/fesm2022/testing.mjs:1300:33)
+      at src/services/driver-dashboard.service.spec.ts:9:23
+      at _ZoneDelegate.invoke (node_modules/zone.js/bundles/zone.umd.js:407:168)
+      at _ProxyZoneSpec.onInvoke (node_modules/zone.js/bundles/zone-testing.umd.js:1079:43)
+      at _ZoneDelegate.invoke (node_modules/zone.js/bundles/zone.umd.js:407:56)
+      at _ZoneImpl.run (node_modules/zone.js/bundles/zone.umd.js:162:47)
+      at Object.wrappedFunc (node_modules/zone.js/bundles/zone-testing.umd.js:407:38)
+
+FAIL src/services/kds.service.spec.ts
+  ظù KdsService ظ║ should be created
+
+    ╔╡NotFound: NG0201: No provider found for `KdsService`. Find more at https://v21.angular.dev/errors/NG0201
+
+       7 |   beforeEach(() => {
+       8 |     TestBed.configureTestingModule({});
+    >  9 |     service = TestBed.inject(KdsService);
+         |                       ^
+      10 |   });
+      11 |
+      12 |   it('should be created', () => {
+
+      at createRuntimeError (node_modules/@angular/core/fesm2022/_effect-chunk2.mjs:602:17)
+      at NullInjector.get (node_modules/@angular/core/fesm2022/_effect-chunk2.mjs:883:21)
+      at R3Injector.get (node_modules/@angular/core/fesm2022/_effect-chunk2.mjs:1208:27)
+      at R3Injector.get (node_modules/@angular/core/fesm2022/_effect-chunk2.mjs:1208:27)
+      at _TestBedImpl.inject (node_modules/@angular/core/fesm2022/testing.mjs:1414:58)
+      at _TestBedImpl.inject (node_modules/@angular/core/fesm2022/testing.mjs:1300:33)
+      at src/services/kds.service.spec.ts:9:23
+      at _ZoneDelegate.invoke (node_modules/zone.js/bundles/zone.umd.js:407:168)
+      at _ProxyZoneSpec.onInvoke (node_modules/zone.js/bundles/zone-testing.umd.js:1079:43)
+      at _ZoneDelegate.invoke (node_modules/zone.js/bundles/zone.umd.js:407:56)
+      at _ZoneImpl.run (node_modules/zone.js/bundles/zone.umd.js:162:47)
+      at Object.wrappedFunc (node_modules/zone.js/bundles/zone-testing.umd.js:407:38)
+
+PASS src/services/menu.service.spec.ts
+PASS src/services/view.service.spec.ts
+PASS src/services/notification.service.spec.ts
+PASS src/services/payment.service.spec.ts
+PASS src/services/reservation.service.spec.ts
+PASS src/services/order-tracking.service.spec.ts
+PASS src/services/expense.service.spec.ts
+PASS src/services/order.service.spec.ts
+PASS src/services/cart.service.spec.ts
+PASS src/services/auth.service.spec.ts
+PASS src/services/achievement.service.spec.ts
+PASS src/services/analytics.service.spec.ts
+PASS src/services/promotions.service.spec.ts
+PASS src/services/branch.service.spec.ts
+PASS src/services/delivery-zone.service.spec.ts
+PASS src/services/account-statement.service.spec.ts
+PASS src/services/expenses.service.spec.ts
+PASS src/services/chat.service.spec.ts
+PASS src/services/error-tracking.service.spec.ts
+PASS src/services/favorites.service.spec.ts
+PASS src/services/driver-order-detail.service.spec.ts
+
+Summary of all failing tests
+FAIL src/components/about/about.component.spec.ts (7.044 s)
+  ظù AboutComponent ظ║ should create
+
+    NG0400: A platform with a different configuration has been created. Please destroy it first.
+
+       9 |     TestBed.initTestEnvironment(
+      10 |       await import('@angular/platform-browser-dynamic/testing').then(m => m.BrowserDynamicTestingModule),
+    > 11 |       await import('@angular/platform-browser-dynamic/testing').then(m => m.platformBrowserDynamicTesting())
+         |                                                                             ^
+      12 |     );
+      13 |
+      14 |     await TestBed.configureTestingModule({
+
+      at assertPlatform (node_modules/@angular/core/fesm2022/core.mjs:824:11)
+      at Object.<anonymous> (node_modules/@angular/core/fesm2022/core.mjs:803:77)
+      at src/components/about/about.component.spec.ts:11:77
+      at _ZoneDelegate.invoke (node_modules/zone.js/bundles/zone.umd.js:407:168)
+      at _ZoneImpl.run (node_modules/zone.js/bundles/zone.umd.js:162:47)
+      at node_modules/zone.js/bundles/zone.umd.js:2181:42
+      at _ZoneDelegate.invokeTask (node_modules/zone.js/bundles/zone.umd.js:436:181)
+      at _ZoneImpl.runTask (node_modules/zone.js/bundles/zone.umd.js:204:51)
+      at drainMicroTaskQueueSynchronously (node_modules/zone.js/bundles/zone.umd.js:617:35)
+
+FAIL src/services/gemini.service.spec.ts (8.058 s)
+  ظù GeminiService ظ║ should be created
+
+    ReferenceError: GEMINI_API_KEY is not defined
+
+      29 |      // IMPORTANT: The API key is injected via environment variables.
+      30 |     // Do not hardcode or expose it in the code.
+    > 31 |     this.ai = new GoogleGenAI({ apiKey: GEMINI_API_KEY });
+         |                                         ^
+      32 |   }
+      33 |
+      34 |   async generateDescription(itemName: string): Promise<string> {
+
+      at new GeminiService (src/services/gemini.service.ts:31:41)
+      at Object.GeminiService_Factory [as factory] (ng:\GeminiService\╔╡fac.js:5:10)
+      at node_modules/@angular/core/fesm2022/_effect-chunk2.mjs:1316:35
+      at runInInjectorProfilerContext (node_modules/@angular/core/fesm2022/_effect-chunk2.mjs:444:5)
+      at R3Injector.hydrate (node_modules/@angular/core/fesm2022/_effect-chunk2.mjs:1314:11)
+      at R3Injector.get (node_modules/@angular/core/fesm2022/_effect-chunk2.mjs:1203:23)
+      at _TestBedImpl.inject (node_modules/@angular/core/fesm2022/testing.mjs:1413:48)
+      at _TestBedImpl.inject (node_modules/@angular/core/fesm2022/testing.mjs:1300:33)
+      at src/services/gemini.service.spec.ts:9:23
+      at _ZoneDelegate.invoke (node_modules/zone.js/bundles/zone.umd.js:407:168)
+      at _ProxyZoneSpec.onInvoke (node_modules/zone.js/bundles/zone-testing.umd.js:1079:43)
+      at _ZoneDelegate.invoke (node_modules/zone.js/bundles/zone.umd.js:407:56)
+      at _ZoneImpl.run (node_modules/zone.js/bundles/zone.umd.js:162:47)
+      at Object.wrappedFunc (node_modules/zone.js/bundles/zone-testing.umd.js:407:38)
+
+FAIL src/components/header/header.component.spec.ts (8.918 s)
+  ظù HeaderComponent ظ║ should create
+
+    NG0400: A platform with a different configuration has been created. Please destroy it first.
+
+      15 |     TestBed.initTestEnvironment(
+      16 |       await import('@angular/platform-browser-dynamic/testing').then(m => m.BrowserDynamicTestingModule),
+    > 17 |       await import('@angular/platform-browser-dynamic/testing').then(m => m.platformBrowserDynamicTesting())
+         |                                                                             ^
+      18 |     );
+      19 |
+      20 |     const cartServiceSpy = jasmine.createSpyObj('CartService', ['getCartItems']);
+
+      at assertPlatform (node_modules/@angular/core/fesm2022/core.mjs:824:11)
+      at Object.<anonymous> (node_modules/@angular/core/fesm2022/core.mjs:803:77)
+      at src/components/header/header.component.spec.ts:17:77
+      at _ZoneDelegate.invoke (node_modules/zone.js/bundles/zone.umd.js:407:168)
+      at _ZoneImpl.run (node_modules/zone.js/bundles/zone.umd.js:162:47)
+      at node_modules/zone.js/bundles/zone.umd.js:2181:42
+      at _ZoneDelegate.invokeTask (node_modules/zone.js/bundles/zone.umd.js:436:181)
+      at _ZoneImpl.runTask (node_modules/zone.js/bundles/zone.umd.js:204:51)
+      at drainMicroTaskQueueSynchronously (node_modules/zone.js/bundles/zone.umd.js:617:35)
+
+  ظù HeaderComponent ظ║ should inject services
+
+    NG0400: A platform with a different configuration has been created. Please destroy it first.
+
+      15 |     TestBed.initTestEnvironment(
+      16 |       await import('@angular/platform-browser-dynamic/testing').then(m => m.BrowserDynamicTestingModule),
+    > 17 |       await import('@angular/platform-browser-dynamic/testing').then(m => m.platformBrowserDynamicTesting())
+         |                                                                             ^
+      18 |     );
+      19 |
+      20 |     const cartServiceSpy = jasmine.createSpyObj('CartService', ['getCartItems']);
+
+      at assertPlatform (node_modules/@angular/core/fesm2022/core.mjs:824:11)
+      at Object.<anonymous> (node_modules/@angular/core/fesm2022/core.mjs:803:77)
+      at src/components/header/header.component.spec.ts:17:77
+      at _ZoneDelegate.invoke (node_modules/zone.js/bundles/zone.umd.js:407:168)
+      at _ZoneImpl.run (node_modules/zone.js/bundles/zone.umd.js:162:47)
+      at node_modules/zone.js/bundles/zone.umd.js:2181:42
+      at _ZoneDelegate.invokeTask (node_modules/zone.js/bundles/zone.umd.js:436:181)
+      at _ZoneImpl.runTask (node_modules/zone.js/bundles/zone.umd.js:204:51)
+      at drainMicroTaskQueueSynchronously (node_modules/zone.js/bundles/zone.umd.js:617:35)
+
+FAIL src/services/ai-recommendation.service.spec.ts
+  ظù AiRecommendationService ظ║ should be created
+
+    ReferenceError: GEMINI_API_KEY is not defined
+
+       9 | export class AiRecommendationService {
+      10 |   private menuService = inject(MenuService);
+    > 11 |   private ai = new GoogleGenAI({ apiKey: GEMINI_API_KEY });
+         |                                          ^
+      12 |   
+      13 |   recommendations = signal<Item[]>([]);
+      14 |   isLoading = signal(false);
+
+      at new AiRecommendationService (src/services/ai-recommendation.service.ts:11:42)
+      at Object.AiRecommendationService_Factory [as factory] (ng:\AiRecommendationService\╔╡fac.js:5:10)
+      at node_modules/@angular/core/fesm2022/_effect-chunk2.mjs:1316:35
+      at runInInjectorProfilerContext (node_modules/@angular/core/fesm2022/_effect-chunk2.mjs:444:5)
+      at R3Injector.hydrate (node_modules/@angular/core/fesm2022/_effect-chunk2.mjs:1314:11)
+      at R3Injector.get (node_modules/@angular/core/fesm2022/_effect-chunk2.mjs:1203:23)
+      at _TestBedImpl.inject (node_modules/@angular/core/fesm2022/testing.mjs:1413:48)
+      at _TestBedImpl.inject (node_modules/@angular/core/fesm2022/testing.mjs:1300:33)
+      at src/services/ai-recommendation.service.spec.ts:9:23
+      at _ZoneDelegate.invoke (node_modules/zone.js/bundles/zone.umd.js:407:168)
+      at _ProxyZoneSpec.onInvoke (node_modules/zone.js/bundles/zone-testing.umd.js:1079:43)
+      at _ZoneDelegate.invoke (node_modules/zone.js/bundles/zone.umd.js:407:56)
+      at _ZoneImpl.run (node_modules/zone.js/bundles/zone.umd.js:162:47)
+      at Object.wrappedFunc (node_modules/zone.js/bundles/zone-testing.umd.js:407:38)
+
+FAIL src/services/loyalty.service.spec.ts
+  ظù LoyaltyService ظ║ should be created
+
+    ╔╡NotFound: NG0201: No provider found for `LoyaltyService`. Find more at https://v21.angular.dev/errors/NG0201
+
+       7 |   beforeEach(() => {
+       8 |     TestBed.configureTestingModule({});
+    >  9 |     service = TestBed.inject(LoyaltyService);
+         |                       ^
+      10 |   });
+      11 |
+      12 |   it('should be created', () => {
+
+      at createRuntimeError (node_modules/@angular/core/fesm2022/_effect-chunk2.mjs:602:17)
+      at NullInjector.get (node_modules/@angular/core/fesm2022/_effect-chunk2.mjs:883:21)
+      at R3Injector.get (node_modules/@angular/core/fesm2022/_effect-chunk2.mjs:1208:27)
+      at R3Injector.get (node_modules/@angular/core/fesm2022/_effect-chunk2.mjs:1208:27)
+      at _TestBedImpl.inject (node_modules/@angular/core/fesm2022/testing.mjs:1414:58)
+      at _TestBedImpl.inject (node_modules/@angular/core/fesm2022/testing.mjs:1300:33)
+      at src/services/loyalty.service.spec.ts:9:23
+      at _ZoneDelegate.invoke (node_modules/zone.js/bundles/zone.umd.js:407:168)
+      at _ProxyZoneSpec.onInvoke (node_modules/zone.js/bundles/zone-testing.umd.js:1079:43)
+      at _ZoneDelegate.invoke (node_modules/zone.js/bundles/zone.umd.js:407:56)
+      at _ZoneImpl.run (node_modules/zone.js/bundles/zone.umd.js:162:47)
+      at Object.wrappedFunc (node_modules/zone.js/bundles/zone-testing.umd.js:407:38)
+
+FAIL src/services/theme.service.spec.ts
+  ظù ThemeService ظ║ should be created
+
+    TypeError: window.matchMedia is not a function
+
+      14 |     } else {
+      15 |       // Check system preference
+    > 16 |       const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+         |                                  ^
+      17 |       this.isDarkMode.set(prefersDark);
+      18 |     }
+      19 |
+
+      at new ThemeService (src/services/theme.service.ts:16:34)
+      at Object.ThemeService_Factory [as factory] (ng:\ThemeService\╔╡fac.js:5:10)
+      at node_modules/@angular/core/fesm2022/_effect-chunk2.mjs:1316:35
+      at runInInjectorProfilerContext (node_modules/@angular/core/fesm2022/_effect-chunk2.mjs:444:5)
+      at R3Injector.hydrate (node_modules/@angular/core/fesm2022/_effect-chunk2.mjs:1314:11)
+      at R3Injector.get (node_modules/@angular/core/fesm2022/_effect-chunk2.mjs:1203:23)
+      at _TestBedImpl.inject (node_modules/@angular/core/fesm2022/testing.mjs:1413:48)
+      at _TestBedImpl.inject (node_modules/@angular/core/fesm2022/testing.mjs:1300:33)
+      at src/services/theme.service.spec.ts:9:23
+      at _ZoneDelegate.invoke (node_modules/zone.js/bundles/zone.umd.js:407:168)
+      at _ProxyZoneSpec.onInvoke (node_modules/zone.js/bundles/zone-testing.umd.js:1079:43)
+      at _ZoneDelegate.invoke (node_modules/zone.js/bundles/zone.umd.js:407:56)
+      at _ZoneImpl.run (node_modules/zone.js/bundles/zone.umd.js:162:47)
+      at Object.wrappedFunc (node_modules/zone.js/bundles/zone-testing.umd.js:407:38)
+
+FAIL src/services/driver-profile.service.spec.ts
+  ظù DriverProfileService ظ║ should be created
+
+    ╔╡NotFound: NG0201: No provider found for `DriverProfileService`. Find more at https://v21.angular.dev/errors/NG0201
+
+       7 |   beforeEach(() => {
+       8 |     TestBed.configureTestingModule({});
+    >  9 |     service = TestBed.inject(DriverProfileService);
+         |                       ^
+      10 |   });
+      11 |
+      12 |   it('should be created', () => {
+
+      at createRuntimeError (node_modules/@angular/core/fesm2022/_effect-chunk2.mjs:602:17)
+      at NullInjector.get (node_modules/@angular/core/fesm2022/_effect-chunk2.mjs:883:21)
+      at R3Injector.get (node_modules/@angular/core/fesm2022/_effect-chunk2.mjs:1208:27)
+      at R3Injector.get (node_modules/@angular/core/fesm2022/_effect-chunk2.mjs:1208:27)
+      at _TestBedImpl.inject (node_modules/@angular/core/fesm2022/testing.mjs:1414:58)
+      at _TestBedImpl.inject (node_modules/@angular/core/fesm2022/testing.mjs:1300:33)
+      at src/services/driver-profile.service.spec.ts:9:23
+      at _ZoneDelegate.invoke (node_modules/zone.js/bundles/zone.umd.js:407:168)
+      at _ProxyZoneSpec.onInvoke (node_modules/zone.js/bundles/zone-testing.umd.js:1079:43)
+      at _ZoneDelegate.invoke (node_modules/zone.js/bundles/zone.umd.js:407:56)
+      at _ZoneImpl.run (node_modules/zone.js/bundles/zone.umd.js:162:47)
+      at Object.wrappedFunc (node_modules/zone.js/bundles/zone-testing.umd.js:407:38)
+
+FAIL src/services/error.handler.spec.ts
+  ظù ErrorHandlerService ظ║ should be created
+
+    ╔╡NotFound: NG0201: No provider found for `ErrorHandlerService`. Find more at https://v21.angular.dev/errors/NG0201
+
+      12 |       ]
+      13 |     });
+    > 14 |     service = TestBed.inject(ErrorHandlerService);
+         |                       ^
+      15 |   });
+      16 |
+      17 |   it('should be created', () => {
+
+      at createRuntimeError (node_modules/@angular/core/fesm2022/_effect-chunk2.mjs:602:17)
+      at NullInjector.get (node_modules/@angular/core/fesm2022/_effect-chunk2.mjs:883:21)
+      at R3Injector.get (node_modules/@angular/core/fesm2022/_effect-chunk2.mjs:1208:27)
+      at R3Injector.get (node_modules/@angular/core/fesm2022/_effect-chunk2.mjs:1208:27)
+      at _TestBedImpl.inject (node_modules/@angular/core/fesm2022/testing.mjs:1414:58)
+      at _TestBedImpl.inject (node_modules/@angular/core/fesm2022/testing.mjs:1300:33)
+      at src/services/error.handler.spec.ts:14:23
+      at _ZoneDelegate.invoke (node_modules/zone.js/bundles/zone.umd.js:407:168)
+      at _ProxyZoneSpec.onInvoke (node_modules/zone.js/bundles/zone-testing.umd.js:1079:43)
+      at _ZoneDelegate.invoke (node_modules/zone.js/bundles/zone.umd.js:407:56)
+      at _ZoneImpl.run (node_modules/zone.js/bundles/zone.umd.js:162:47)
+      at Object.wrappedFunc (node_modules/zone.js/bundles/zone-testing.umd.js:407:38)
+
+FAIL src/services/ai-assistant.service.spec.ts
+  ظù AiAssistantService ظ║ should be created
+
+    ╔╡NotFound: NG0201: No provider found for `AiAssistantService`. Find more at https://v21.angular.dev/errors/NG0201
+
+       7 |   beforeEach(() => {
+       8 |     TestBed.configureTestingModule({});
+    >  9 |     service = TestBed.inject(AiAssistantService);
+         |                       ^
+      10 |   });
+      11 |
+      12 |   it('should be created', () => {
+
+      at createRuntimeError (node_modules/@angular/core/fesm2022/_effect-chunk2.mjs:602:17)
+      at NullInjector.get (node_modules/@angular/core/fesm2022/_effect-chunk2.mjs:883:21)
+      at R3Injector.get (node_modules/@angular/core/fesm2022/_effect-chunk2.mjs:1208:27)
+      at R3Injector.get (node_modules/@angular/core/fesm2022/_effect-chunk2.mjs:1208:27)
+      at _TestBedImpl.inject (node_modules/@angular/core/fesm2022/testing.mjs:1414:58)
+      at _TestBedImpl.inject (node_modules/@angular/core/fesm2022/testing.mjs:1300:33)
+      at src/services/ai-assistant.service.spec.ts:9:23
+      at _ZoneDelegate.invoke (node_modules/zone.js/bundles/zone.umd.js:407:168)
+      at _ProxyZoneSpec.onInvoke (node_modules/zone.js/bundles/zone-testing.umd.js:1079:43)
+      at _ZoneDelegate.invoke (node_modules/zone.js/bundles/zone.umd.js:407:56)
+      at _ZoneImpl.run (node_modules/zone.js/bundles/zone.umd.js:162:47)
+      at Object.wrappedFunc (node_modules/zone.js/bundles/zone-testing.umd.js:407:38)
+
+FAIL src/services/driver-dashboard.service.spec.ts
+  ظù DriverDashboardService ظ║ should be created
+
+    ╔╡NotFound: NG0201: No provider found for `DriverDashboardService`. Find more at https://v21.angular.dev/errors/NG0201
+
+       7 |   beforeEach(() => {
+       8 |     TestBed.configureTestingModule({});
+    >  9 |     service = TestBed.inject(DriverDashboardService);
+         |                       ^
+      10 |   });
+      11 |
+      12 |   it('should be created', () => {
+
+      at createRuntimeError (node_modules/@angular/core/fesm2022/_effect-chunk2.mjs:602:17)
+      at NullInjector.get (node_modules/@angular/core/fesm2022/_effect-chunk2.mjs:883:21)
+      at R3Injector.get (node_modules/@angular/core/fesm2022/_effect-chunk2.mjs:1208:27)
+      at R3Injector.get (node_modules/@angular/core/fesm2022/_effect-chunk2.mjs:1208:27)
+      at _TestBedImpl.inject (node_modules/@angular/core/fesm2022/testing.mjs:1414:58)
+      at _TestBedImpl.inject (node_modules/@angular/core/fesm2022/testing.mjs:1300:33)
+      at src/services/driver-dashboard.service.spec.ts:9:23
+      at _ZoneDelegate.invoke (node_modules/zone.js/bundles/zone.umd.js:407:168)
+      at _ProxyZoneSpec.onInvoke (node_modules/zone.js/bundles/zone-testing.umd.js:1079:43)
+      at _ZoneDelegate.invoke (node_modules/zone.js/bundles/zone.umd.js:407:56)
+      at _ZoneImpl.run (node_modules/zone.js/bundles/zone.umd.js:162:47)
+      at Object.wrappedFunc (node_modules/zone.js/bundles/zone-testing.umd.js:407:38)
+
+FAIL src/services/kds.service.spec.ts
+  ظù KdsService ظ║ should be created
+
+    ╔╡NotFound: NG0201: No provider found for `KdsService`. Find more at https://v21.angular.dev/errors/NG0201
+
+       7 |   beforeEach(() => {
+       8 |     TestBed.configureTestingModule({});
+    >  9 |     service = TestBed.inject(KdsService);
+         |                       ^
+      10 |   });
+      11 |
+      12 |   it('should be created', () => {
+
+      at createRuntimeError (node_modules/@angular/core/fesm2022/_effect-chunk2.mjs:602:17)
+      at NullInjector.get (node_modules/@angular/core/fesm2022/_effect-chunk2.mjs:883:21)
+      at R3Injector.get (node_modules/@angular/core/fesm2022/_effect-chunk2.mjs:1208:27)
+      at R3Injector.get (node_modules/@angular/core/fesm2022/_effect-chunk2.mjs:1208:27)
+      at _TestBedImpl.inject (node_modules/@angular/core/fesm2022/testing.mjs:1414:58)
+      at _TestBedImpl.inject (node_modules/@angular/core/fesm2022/testing.mjs:1300:33)
+      at src/services/kds.service.spec.ts:9:23
+      at _ZoneDelegate.invoke (node_modules/zone.js/bundles/zone.umd.js:407:168)
+      at _ProxyZoneSpec.onInvoke (node_modules/zone.js/bundles/zone-testing.umd.js:1079:43)
+      at _ZoneDelegate.invoke (node_modules/zone.js/bundles/zone.umd.js:407:56)
+      at _ZoneImpl.run (node_modules/zone.js/bundles/zone.umd.js:162:47)
+      at Object.wrappedFunc (node_modules/zone.js/bundles/zone-testing.umd.js:407:38)
+
+
+Test Suites: 11 failed, 21 passed, 32 total
+Tests:       12 failed, 21 passed, 33 total
+Snapshots:   0 total
+Time:        40.655 s
+Ran all test suites.

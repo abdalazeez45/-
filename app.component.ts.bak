@@ -1,0 +1,107 @@
+import { ChangeDetectionStrategy, Component, inject, effect } from '@angular/core';
+import { RouterOutlet } from '@angular/router';
+import { HeaderComponent } from './components/header/header.component';
+import { CartComponent } from './components/cart/cart.component';
+import { CheckoutComponent } from './components/checkout/checkout.component';
+import { AuthModalComponent } from './components/auth-modal/auth-modal.component';
+import { OrderHistoryComponent } from './components/order-history/order-history.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { ReservationComponent } from './components/reservation/reservation.component';
+import { OrderTrackingComponent } from './components/order-tracking/order-tracking.component';
+import { ViewService } from './services/view.service';
+import { AuthService } from './services/auth.service';
+import { CartService } from './services/cart.service';
+import { ThemeService } from './services/theme.service';
+import { AiAssistantComponent } from './components/ai-assistant/ai-assistant.component';
+import { NotificationToastComponent } from './components/shared/notification-toast/notification-toast.component';
+import { AccountStatementComponent } from './components/account-statement/account-statement.component';
+import { ProfileSettingsComponent } from './components/profile-settings/profile-settings.component';
+import { OrderDetailModalComponent } from './components/dashboard/order-detail-modal/order-detail-modal.component';
+import { LoyaltyComponent } from './components/loyalty/loyalty.component';
+import { DriverProfileComponent } from './components/driver-profile/driver-profile.component';
+import { DriverOrderDetailComponent } from './components/driver-order-detail/driver-order-detail.component';
+import { ChatComponent } from './components/chat/chat.component';
+import { NotificationService } from './services/notification.service';
+import { ErrorTrackingService } from './services/error-tracking.service';
+import { ChatService } from './services/chat.service';
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  imports: [
+    RouterOutlet,
+    HeaderComponent, 
+    CartComponent, 
+    CheckoutComponent, 
+    AuthModalComponent,
+    OrderHistoryComponent,
+    FooterComponent,
+    ReservationComponent,
+    OrderTrackingComponent,
+    AiAssistantComponent,
+    NotificationToastComponent,
+    AccountStatementComponent,
+    ProfileSettingsComponent,
+    OrderDetailModalComponent,
+    LoyaltyComponent,
+    DriverProfileComponent,
+    DriverOrderDetailComponent,
+    ChatComponent
+  ]
+})
+export class AppComponent {
+  viewService = inject(ViewService);
+  authService = inject(AuthService);
+  cartService = inject(CartService);
+  themeService = inject(ThemeService);
+  notificationService = inject(NotificationService);
+  errorTrackingService = inject(ErrorTrackingService);
+  chatService = inject(ChatService);
+
+  constructor() {
+    this.errorTrackingService.init();
+
+    // Effect to set user context for error tracking
+    effect(() => {
+      const user = this.authService.currentUser();
+      this.errorTrackingService.setUserContext(user);
+    });
+
+    // Effect to switch views automatically based on user role upon login/logout
+    effect(() => {
+      const user = this.authService.currentUser();
+      const currentView = this.viewService.currentView();
+      console.log('[AppComponent] current user', user?.phone, 'role', user?.role, 'currentView', currentView);
+
+      if (user) {
+        if (this.authService.isDriver()) {
+          console.log('[AppComponent] detected driver');
+          if (currentView !== 'driver') {
+            this.viewService.switchToDriver();
+          }
+        } else if (this.authService.canAccessDashboard()) {
+          console.log('[AppComponent] detected dashboard user');
+          if (currentView !== 'dashboard') {
+            this.viewService.switchToDashboard();
+          }
+          this.notificationService.requestPermission(); // Request permission for desktop notifications
+        } else { // This is a customer
+          console.log('[AppComponent] detected customer');
+           if (currentView !== 'customer') {
+            this.viewService.switchToCustomer();
+           }
+        }
+      } else { // Logged out
+        console.log('[AppComponent] no user, switching customer view');
+        if (currentView !== 'customer') {
+          this.viewService.switchToCustomer();
+        }
+      }
+    });
+  }
+
+  showAuthModal() {
+    this.authService.showAuthModal();
+  }
+}
